@@ -154,6 +154,8 @@ If your data is stored in structured formats like CSV, JSON, or Parquet directly
 
     Define Schema: Use tools like AWS Glue to define the schema of your data stored in S3 and create metadata tables.
 
+![](https://github.com/aws-samples/aws-cdk-pipelines-datalake-infrastructure/blob/main/resources/Aws-cdk-pipelines-blog-datalake-data_lake.png)
+
     Run Queries: Once the schema is defined, you can run SQL queries against your data using services like AWS Glue or directly using SQL-on-Hadoop engines like Presto.
 
     Perform Analytics: Use SQL to perform various analytics tasks such as data aggregations, transformations, and joins to derive insights from your data.
