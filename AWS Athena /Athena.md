@@ -120,3 +120,106 @@ Replace 'your-region' with the appropriate AWS region where your Glue Data Catal
 
 Additionally, if you want to retrieve information about a specific database, you can use the get_database method:
 
+    import boto3
+    
+    # Initialize AWS Glue client
+    glue_client = boto3.client('glue', region_name='your-region')
+    
+    # Get database details
+    database_name = 'your-database-name'
+    
+    response = glue_client.get_database(
+        Name=database_name
+    )
+    
+    # Print database details
+    print(response['Database'])
+    Replace 'your-database-name' with the name of the database you want to retrieve details for. This code will fetch details about the specified database from the Glue Data Catalog.Remember to ensure that your AWS credentials are properly configured to allow access to AWS Glue and its Data Catalog.
+
+# pyspark
+
+ To interact with databases in PySpark, you typically use the pyspark.sql module, which provides a DataFrame API for working with structured data. Here's an example of how you can use PySpark to interact with databases:
+
+            from pyspark.sql import SparkSession
+            
+            # Initialize SparkSession
+            spark = SparkSession.builder \
+                .appName("Database Interaction Example") \
+                .config("spark.some.config.option", "some-value") \
+                .getOrCreate()
+            
+            # Define database connection properties
+            database_url = "jdbc:postgresql://your-database-host:5432/your-database"
+            database_properties = {
+                "user": "your-username",
+                "password": "your-password",
+                "driver": "org.postgresql.Driver"
+            }
+            
+            # Read data from a table in the database
+            df = spark.read \
+                .jdbc(url=database_url, table="your_table_name", properties=database_properties)
+            
+            # Show DataFrame schema
+            df.printSchema()
+            
+            # Show first few rows of the DataFrame
+            df.show()
+            
+            # Perform some transformations and analysis on the DataFrame
+            # For example, you can filter, aggregate, or manipulate data using DataFrame operations
+            
+            # Write data back to the database
+            # For example, you can write the transformed DataFrame back to a different table in the same database
+            # df.write.jdbc(url=database_url, table="new_table_name", mode="overwrite", properties=database_properties)
+            
+            # Stop SparkSession
+            spark.stop()
+        //In this code:
+
+    Replace "jdbc:postgresql://your-database-host:5432/your-database" with the JDBC URL of your database. Adjust the URL based on your database type (e.g., MySQL, Oracle, etc.).
+    Update "your-username" and "your-password" with your database credentials.
+    Change "org.postgresql.Driver" to the appropriate JDBC driver class for your database type.
+    Replace "your_table_name" with the name of the table you want to read from.
+    You can perform various DataFrame operations (filtering, aggregation, etc.) on the df DataFrame as needed.
+    If you want to write data back to the database, uncomment the write.jdbc() line and adjust the parameters accordingly.
+    Ensure that you have the necessary JDBC driver for your database installed and included in your Spark environment.
+
+ To interact with databases using AWS Athena in PySpark, you typically don't directly interact with Athena as a database like you would with a traditional SQL database. Instead, you can use Athena to query data stored in Amazon S3. Here's how you can use PySpark to interact with data stored in Amazon S3, which you can then query using Athena:
+
+            from pyspark.sql import SparkSession
+            
+            # Initialize SparkSession
+            spark = SparkSession.builder \
+                .appName("Athena Interaction Example") \
+                .config("spark.some.config.option", "some-value") \
+                .getOrCreate()
+            
+            # Define the S3 path where your data is stored
+            s3_path = "s3://your-bucket/your-folder/"
+            
+            # Read data from S3 into a DataFrame
+            df = spark.read.parquet(s3_path)  # Adjust the file format (e.g., parquet, CSV, etc.) as needed
+            
+            # Show DataFrame schema
+            df.printSchema()
+            
+            # Show first few rows of the DataFrame
+            df.show()
+            
+            # Perform some transformations and analysis on the DataFrame
+            # For example, you can filter, aggregate, or manipulate data using DataFrame operations
+            
+            # Write data back to S3
+            # For example, you can write the transformed DataFrame back to a different folder in the same S3 bucket
+            # df.write.parquet("s3://your-bucket/new-folder/")
+            
+            # Stop SparkSession
+            spark.stop()
+
+Replace "s3://your-bucket/your-folder/" with the S3 path where your data is stored.
+Adjust the file format (parquet, CSV, etc.) in the spark.read method according to the format of your data.
+You can perform various DataFrame operations (filtering, aggregation, etc.) on the df DataFrame as needed.
+If you want to write data back to S3, uncomment the write.parquet() line and adjust the destination folder accordingly.
+
+Remember that Athena is not directly involved in this PySpark code. Instead, you're using PySpark to read and manipulate data stored in S3, which you may then choose to query using Athena separately.
