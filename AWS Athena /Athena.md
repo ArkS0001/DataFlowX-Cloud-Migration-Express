@@ -64,7 +64,7 @@ Overall, AWS Athena is a valuable tool for organizations looking to analyze larg
         print("Query execution failed or was cancelled.")
      replace 'your-region', 'your_table', 'your_database', and 's3://your-bucket/query-results/' with your actual AWS region, table name, database name, and S3 bucket location for query results respectively. Also, ensure that your AWS credentials are properly configured either through environment variables, AWS CLI, or IAM roles if running this code in an AWS environment.
 
-
+![](https://www.xenonstack.com/hubfs/amazon-athena-tools.png)
 
 To create a database in AWS Glue, which you can then access and query using Athena, you can follow these steps:
 
