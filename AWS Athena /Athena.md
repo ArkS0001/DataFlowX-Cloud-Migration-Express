@@ -2,6 +2,9 @@ AWS Athena is a serverless interactive query service that allows you to analyze 
 
 With Athena, you can run ad-hoc queries on data stored in S3 without the need for infrastructure management. It supports a variety of data formats including CSV, JSON, ORC, Avro, and Parquet, among others. Athena uses Presto, an open-source distributed SQL query engine, under the hood to execute queries.
 
+![athena-websocket-api-architecture-2](https://github.com/ArkS0001/DataFlowX-Cloud-Service/assets/113760964/34ae1406-36c3-4637-b84d-6ac090730c52)
+
+
 One of the key benefits of Athena is its flexibility and scalability. You only pay for the queries you run, and there are no upfront costs or infrastructure to manage. This makes it ideal for organizations that need to analyze large volumes of data without investing in expensive infrastructure.
 
 Athena integrates seamlessly with other AWS services such as AWS Glue for data cataloging and AWS S3 for data storage, making it a powerful tool for building data pipelines and performing complex analytics tasks. Additionally, you can use Athena with AWS Identity and Access Management (IAM) to control access to your data and ensure security.
@@ -60,6 +63,8 @@ Overall, AWS Athena is a valuable tool for organizations looking to analyze larg
     else:
         print("Query execution failed or was cancelled.")
      replace 'your-region', 'your_table', 'your_database', and 's3://your-bucket/query-results/' with your actual AWS region, table name, database name, and S3 bucket location for query results respectively. Also, ensure that your AWS credentials are properly configured either through environment variables, AWS CLI, or IAM roles if running this code in an AWS environment.
+
+
 
 To create a database in AWS Glue, which you can then access and query using Athena, you can follow these steps:
 
