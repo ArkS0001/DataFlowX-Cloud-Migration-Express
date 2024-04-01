@@ -1,3 +1,6 @@
+![WhatsApp Image 2024-04-01 at 4 02 28 PM](https://github.com/ArkS0001/DataFlowX-Cloud-Service/assets/113760964/65e3eb0e-2e8f-4ae6-92ce-a73c6d0b9b20)
+
+
 ![The-microbiome-data-analysis-pipeline-using-AWS-AWS-Amazon-Web-Services-S3-Simple](https://github.com/ArkS0001/DataFlowX-Cloud-Migration-Express/assets/113760964/e4fab5f7-9013-4ebb-adfa-ab9692f9ab86)
 
 Setting up an AWS pipeline for data analytics involves several steps, typically utilizing AWS services like S3, Glue, Athena, Redshift, and others. Here's a basic outline of how you might set up such a pipeline:
