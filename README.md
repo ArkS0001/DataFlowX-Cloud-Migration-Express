@@ -6,7 +6,8 @@ The Automated Data Analytics on AWS solution provides an end-to-end data platfor
 
 The following diagram represents the solution's architecture design.
 
-![Diagram](source/images/solution_architecture_diagram.png)
+![solution_architecture_diagram](https://github.com/ArkS0001/DataFlowX-Cloud-Service/assets/113760964/d1c3cd34-884b-40d0-a3b8-cb61bea9021d)
+
 
 The Automated Data Analytics on AWS solution automates the building of data pipelines that are optimized for the size, frequency of update, and type of data. These data pipelines handle the data ingestion, transformations, and queries.
 
