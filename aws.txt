@@ -1,0 +1,6 @@
+https://github.com/data-science-on-aws/data-science-on-aws
+https://github.com/chayansraj/Youtube-video-data-analytics-using-AWS
+https://github.com/xbwei/data-analysis-aws
+https://github.com/aws-samples/data-science-on-aws
+https://github.com/grvhi/Analytics-on-AWS
+https://github.com/aws-samples/amazon-location-service-data-analytics
