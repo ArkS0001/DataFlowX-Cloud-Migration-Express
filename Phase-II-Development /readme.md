@@ -1,4 +1,5 @@
 https://docs.aws.amazon.com/whitepapers/latest/streaming-data-solutions-amazon-kinesis/scenario-2.html
+
 A data analytics pipeline refers to the end-to-end process of collecting, processing, analyzing, and visualizing data to extract meaningful insights and make data-driven decisions. Here's a simplified breakdown of the typical stages in a data analytics pipeline:
 
     Data Collection: This is the initial stage where raw data is gathered from various sources such as databases, APIs, logs, sensors, social media, etc. The data can be structured, semi-structured, or unstructured.
