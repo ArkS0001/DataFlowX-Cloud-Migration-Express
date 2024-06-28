@@ -1,4 +1,5 @@
 https://www.kaggle.com/code/kapusharinka/network-anomaly-detection
+https://www.kaggle.com/code/aadisingh21/intrusion-detection-system
 
 Analyzing network packets and detecting intrusion attacks using machine learning is a multi-step process that involves data collection, feature extraction, model training, and evaluation. Here’s a step-by-step guide to help you through the process:
 1. Data Collection
